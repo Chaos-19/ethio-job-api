@@ -1,4 +1,4 @@
-import express, { NextFunction } from 'express';
+import express from 'express';
 import setupSwagger from './swagger';
 import "dotenv/config"
 
@@ -7,9 +7,6 @@ import jobRoutes from './routes/jobRoutes';
 import errorHandler from './middlewares/errorHandler';
 import logger from './utils/logger';
 import setupCronJobs from './services/setupCronJobs ';
-
-
-
 
 
 export const app = express();
