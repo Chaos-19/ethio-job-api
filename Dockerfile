@@ -21,7 +21,7 @@ COPY . .
 RUN npm run build
 
 # Set the working directory to the build output directory
-WORKDIR /usr/src/app/dist
+WORKDIR ./dist
 
 # Command to run the application
 CMD ["node", "src/index.js"]
