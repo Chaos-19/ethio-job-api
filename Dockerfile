@@ -24,5 +24,5 @@ RUN npm run build
 WORKDIR /usr/src/app/dist
 
 # Command to run the application
-CMD ["node", "src/app.js"]
+CMD ["node", "src/index.js"]
 
