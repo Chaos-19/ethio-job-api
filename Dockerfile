@@ -1,18 +1,28 @@
+# Use Puppeteer image from GitHub Container Registry
 FROM ghcr.io/puppeteer/puppeteer:22.7.1
 
-# Environment variables (adjust if needed)
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+# Environment variables to skip Chromium download and set executable path
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /usr/src/app
 
-# Copy package files and install dependencies
+# Copy package.json and package-lock.json files to the working directory
 COPY package*.json ./
+
+# Install dependencies
 RUN npm ci
 
-# Copy project and build
+# Copy the entire project to the working directory
 COPY . .
+
+# Build the project
 RUN npm run build
 
-# Update path in CMD (working directory is /usr/src/app/dist)
-CMD ["node", "/usr/src/app/src/dist/index.js"]
+# Set the working directory to the build output directory
+WORKDIR /usr/src/app/dist
+
+# Command to run the application
+#CMD ["node", "/index.js"]
+CMD node index.js
