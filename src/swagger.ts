@@ -37,7 +37,7 @@ const swaggerDefinition = {
 const options = {
   swaggerDefinition,
   // Path to the API docs
-  apis: ['./src/routes/jobRoutes.ts'], // Files containing annotations for the Swagger doc
+  apis: [ process.env.NODE_ENV === 'production'?'./dist/routes/jobRoutes.ts':'./src/routes/jobRoutes.ts'], // Files containing annotations for the Swagger doc
 };
 
 // Initialize swagger-jsdoc
