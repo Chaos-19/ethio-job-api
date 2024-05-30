@@ -15,4 +15,4 @@ COPY . .
 RUN npm run build
 
 # Update path in CMD (working directory is /usr/src/app/dist)
-CMD ["node", "/usr/src/app/src/index.js"]
+CMD ["node", "/usr/src/app/src/dist/index.js"]
