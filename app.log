@@ -1,0 +1,9 @@
+{"level":"info","message":"GET /","timestamp":"2024-06-12T19:44:56.232Z"}
+{"level":"info","message":"GET /api/auth/signin","timestamp":"2024-06-12T19:50:12.967Z"}
+{"level":"info","message":"GET /api/v1/jobs","timestamp":"2024-06-12T19:51:23.505Z"}
+{"level":"info","message":"GET /api/v1/jobs","timestamp":"2024-06-12T20:00:46.739Z"}
+{"level":"info","message":"GET /api/v1/jobs","timestamp":"2024-06-12T20:01:00.944Z"}
+{"level":"info","message":"GET /api/v1/jobs","timestamp":"2024-06-12T20:01:02.404Z"}
+{"level":"info","message":"GET /api/v1/jobs","timestamp":"2024-06-12T20:01:03.711Z"}
+{"level":"info","message":"GET /api/v1/jobs","timestamp":"2024-06-12T20:01:07.311Z"}
+{"level":"info","message":"GET /api/v1/jobs","timestamp":"2024-06-12T20:01:09.103Z"}

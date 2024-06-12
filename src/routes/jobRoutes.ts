@@ -1,6 +1,7 @@
 import { Router  } from "express";
 import { getJob } from "../controllers/jobController";
 import { validateApiRequest } from "../middlewares/validateRequest";
+import rateLimiteMiddleware from "../middlewares/rateLimiter";
 
 const router = Router()
 
@@ -101,6 +102,6 @@ const router = Router()
  *         description: Internal server error
  */
 
-router.get('/',validateApiRequest,getJob)
+router.get('/',validateApiRequest,rateLimiteMiddleware,getJob)
 
 export default router

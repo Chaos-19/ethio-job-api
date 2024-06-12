@@ -4,7 +4,7 @@ import { scrapList } from '../schema/schema';
 import { db } from '../config/db';
 import { insertJob } from '../controllers/jobController';
 
-const setupCronJobs = async (croneExpression: string = '*/5 * * * *') => {
+const setupCronJobs = async (croneExpression: string = '* */8 * * *') => {
   cron.schedule(croneExpression, async () => {
     try {
       console.log('Cron job started');
