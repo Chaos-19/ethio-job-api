@@ -15,6 +15,8 @@ const baseUrl = process.env.BASE_URL || '/api/v1';
 app.use(express.json());
 app.use(express.static('public'));
 
+app.set('trust proxy', true); 
+
 setupSwagger(app);
 
 app.use((req, res, next) => {
