@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 setupSwagger(app);
 
-setupCronJobs("0 */8 * * *");
+setupCronJobs("0 */6 * * *");
 
 
 app.use(baseUrl + '/users', userRoutes);
