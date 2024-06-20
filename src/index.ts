@@ -12,6 +12,8 @@ import setupCronJobs from './services/setupCronJobs ';
 export const app = express();
 const baseUrl = process.env.BASE_URL || '/api/v1';
 
+app.set('trust proxy', true);
+
 app.use(express.json());
 app.use(express.static('public'));
 
