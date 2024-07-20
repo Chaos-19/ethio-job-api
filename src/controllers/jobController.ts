@@ -84,7 +84,8 @@ const insertJob = async (data: jobType[]) => {
       );
 
     if (newjobs.length > 0) {
-      const newJob = await db
+      console.log((newjobs))
+        const newJob = await db
         .insert(jobs)
         .values([...newjobs.map((job) => ({ ...job, deadline: new Date() }))]);
     }
